@@ -1,20 +1,43 @@
-<<<<<<< HEAD
-# React + Vite
+# 🌐 Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</div>
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Project Overview
+**Portfolio Website** is a **personal portfolio website** built with **React**.  
+It showcases my **projects, skills, education, and contact information**, with interactive animations and a responsive design for all devices.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Portfolio
->>>>>>> 51dc7622386b53223c6ae34a0810cbfa46e280d3
+## 🎯 Features
+- 🏡 Home section with profile image, short bio, and social links  
+- 💼 Projects section with **animated cards**, GitHub links, and “See More” for descriptions  
+- 🛠 Skills section with **dynamic skill bars** that animate on page load  
+- 🎓 Education section with neon glow bullets and scroll animations  
+- ✉️ Contact form integrated with **EmailJS** to send messages directly to email  
+- 📱 Fully responsive and interactive on desktop and mobile devices  
+- 🌐 Smooth scrolling and section-based navigation  
+
+---
+
+## 💻 Tech Stack
+- **Frontend:** React, HTML, CSS, JavaScript, React Icons  
+- **Deployment:** Netlify  
+
+---
+
+## 🔗 Live Demo
+[![Portfolio Website](https://img.shields.io/badge/-Live%20Demo-1abc9c?style=for-the-badge&logo=netlify&logoColor=white)](https://68e346a13b1df77296fe72ce--monumental-haupia-dc27aa.netlify.app/)
+
+---
+
+✨ Made with ❤️ by **Shubham Borate**
