@@ -1,0 +1,125 @@
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #1e1e2f, #2d2d44);
+  color: white;
+  padding: 80px 20px;
+}
+
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 1100px;
+}
+
+/* Left side - circular profile box */
+.home-left .circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 4px solid #ff6b35;
+  overflow: hidden;
+  background: #2d2d44;
+  box-shadow: 0 0 25px rgba(255, 107, 53, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.home-left .circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(255, 107, 53, 0.7);
+}
+
+/* Fix for image cut issue */
+.home-left .circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ✅ Prevents cropping */
+  border-radius: 50%;
+}
+
+/* Right side */
+.home-right {
+  max-width: 550px;
+  text-align: left;
+}
+
+.home-right h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.home-right h1 span {
+  color: #ff6b35;
+}
+
+.home-right p {
+  color: #ddd;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  color: #ff6b35;
+}
+
+/* Resume */
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 25px;
+  background-color: #ff6b35;
+  color: white;
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+}
+
+.resume-btn:hover {
+  background-color: white;
+  color: #ff6b35;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.6);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-right {
+    text-align: center;
+  }
+
+  .home-left .circle {
+    width: 230px;
+    height: 230px;
+  }
+}

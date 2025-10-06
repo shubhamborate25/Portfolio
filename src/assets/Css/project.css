@@ -1,0 +1,148 @@
+.project-section {
+  background: linear-gradient(90deg, #28283d, #34344f);
+  color: white;
+  padding: 100px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-section h2 {
+  font-size: 36px;
+  color: #ff6b35;
+  margin-bottom: 50px;
+  text-shadow: 0 0 5px #ff6b35, 0 0 15px #ff6b35;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 50%;
+  max-width: 1200px;
+}
+
+.project-card {
+  background: #2d2d44;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 107, 53, 0.5);
+}
+
+/* Project Image Box */
+.project-image {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* square box */
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 10px;
+  box-shadow: inset 0 0 20px rgba(255, 107, 53, 0.2);
+}
+
+/* Make img fit the box */
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fit; /* ensures image fills box without stretching */
+  border-radius: 12px;
+  display: block;
+}
+
+/* GitHub Link */
+.github-link {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff6b35;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: all 0.3s ease;
+}
+
+.project-image:hover .github-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Project Title & Description */
+.project-card h3 {
+  font-size: 24px;
+  color: #ff6b35;
+  margin: 0;
+}
+
+.project-desc p {
+  margin-bottom: 10px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.project-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* show 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* add "..." */
+  transition: max-height 0.3s ease;
+}
+
+.project-desc.expanded {
+  display: block; /* show full content */
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.project-desc p {
+  margin-bottom: 10px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+
+.project-desc.expanded {
+  max-height: 1000px; /* expand to show all paragraphs */
+}
+/* See More link */
+.see-more {
+  color: #ff6b35;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.see-more:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+}
