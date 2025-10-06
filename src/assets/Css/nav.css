@@ -120,26 +120,39 @@
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-  .nav-links {
+   .nav-links {
     position: absolute;
     top: 60px;
-    right: 20px;
+    right: 0;
+    width: 200px;
     background: #2d2d44;
     flex-direction: column;
-    width: 200px;
-    height: 0;
+    align-items: center;
+    max-height: 0;         /* start hidden */
     overflow: hidden;
+    transition: max-height 0.5s ease;  /* smooth animation */
     border-radius: 0 0 10px 10px;
-    padding: 0 15px;
-    transition: height 0.4s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    max-height: 500px;    /* enough to show all links */
+    padding: 15px 0;
+  }
+
+  .logo{
+    margin-left: 30px;
   }
   .contact-btn{
     margin-right: 0;
   }
 
-  .nav-links.active { height: auto; padding: 20px 15px; }
 
-  .nav-links a { padding: 12px 0; }
+  .nav-links a {
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+  }
 
   .menu-icon { display: flex; padding-right: 15px; }
 

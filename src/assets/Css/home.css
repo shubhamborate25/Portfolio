@@ -106,7 +106,6 @@
   box-shadow: 0 4px 12px rgba(255, 107, 53, 0.6);
 }
 
-
 /* Responsive */
 @media (max-width: 768px) {
   .home-container {
@@ -121,5 +120,9 @@
   .home-left .circle {
     width: 230px;
     height: 230px;
+  }
+  .social-icons {
+    justify-content: center; /* Center icons horizontally */
+    margin-top: 20px;
   }
 }

@@ -19,7 +19,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  width: 50%;
+  width: 65%;
   max-width: 1200px;
 }
 
