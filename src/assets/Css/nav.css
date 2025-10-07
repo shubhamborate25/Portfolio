@@ -93,15 +93,17 @@
 .menu-icon {
   display: none;
   flex-direction: column;
+  justify-content: space-between; /* evenly space bars vertically */
+  width: 25px;
+  height: 25px; /* enough height for X animation */
   cursor: pointer;
-  z-index: 1200; /* above dropdown */
+  z-index: 1200;
 }
 
 .bar {
   height: 3px;
   width: 25px;
   background-color: white;
-  margin: 4px 0;
   border-radius: 3px;
   transition: all 0.3s ease;
 }
@@ -146,7 +148,6 @@
   .contact-btn{
     margin-right: 0;
   }
-
 
   .nav-links a {
     padding: 12px 0;

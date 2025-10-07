@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./assets/Css/nav.css";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useLocation } from "react-router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation(); // Track current route
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  // Close mobile menu whenever route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   return (
     <nav className="navbar">
@@ -14,32 +20,19 @@ const Navbar = () => {
 
       {/* Navigation links */}
       <div className={`nav-links ${isOpen ? "active" : ""}`}>
-        <NavLink
-          to="/"
-          end
-          className={({ isActive }) => (isActive ? "active-link" : "")}
-        >
+        <NavLink to="/" end className={({ isActive }) => (isActive ? "active-link" : "")}>
           Home
         </NavLink>
 
-        <NavLink
-          to="/about"
-          className={({ isActive }) => (isActive ? "active-link" : "")}
-        >
+        <NavLink to="/about" className={({ isActive }) => (isActive ? "active-link" : "")}>
           About
         </NavLink>
 
-        <NavLink
-          to="/project"
-          className={({ isActive }) => (isActive ? "active-link" : "")}
-        >
+        <NavLink to="/project" className={({ isActive }) => (isActive ? "active-link" : "")}>
           Project
         </NavLink>
 
-        <NavLink
-          to="/skill"
-          className={({ isActive }) => (isActive ? "active-link" : "")}
-        >
+        <NavLink to="/skill" className={({ isActive }) => (isActive ? "active-link" : "")}>
           Skill
         </NavLink>
       </div>
