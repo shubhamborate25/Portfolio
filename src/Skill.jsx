@@ -21,22 +21,6 @@ const Skill = () => {
     { name: "MySQL", level: 80, icon: <FaDatabase /> },
   ];
 
-  const renderSkills = (skills) =>
-    skills.map((skill, index) => (
-      <div className="skill-card" key={index}>
-        <div className="skill-info">
-          <span className="skill-icon">{skill.icon}</span>
-          <span className="skill-name">{skill.name}</span>
-        </div>
-        <div className="skill-bar">
-          <div
-            className="skill-level"
-            style={{ width: inView ? `${skill.level}%` : "0%" }}
-          ></div>
-        </div>
-      </div>
-    ));
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -44,7 +28,7 @@ const Skill = () => {
           setInView(true);
         }
       },
-      { threshold: 0.3 } // 30% visible triggers animation
+      { threshold: 0.3 }
     );
 
     if (skillRef.current) {
@@ -56,17 +40,49 @@ const Skill = () => {
     };
   }, []);
 
+  const renderSkills = (skills) =>
+    skills.map((skill, index) => {
+      const circumference = 2 * Math.PI * 45; // circle radius = 45
+      const offset = inView ? circumference * (1 - skill.level / 100) : circumference;
+      return (
+        <div className="skill-circle-card" key={index}>
+          <div className="circle-wrapper">
+            <svg width="100" height="100">
+              <circle
+                className="bg-circle"
+                cx="50"
+                cy="50"
+                r="45"
+              />
+              <circle
+                className="progress-circle"
+                cx="50"
+                cy="50"
+                r="45"
+                strokeDasharray={circumference}
+                strokeDashoffset={offset}
+              />
+            </svg>
+            <div className="circle-text">{skill.level}%</div>
+          </div>
+          <div className="skill-name">
+            {skill.icon} {skill.name}
+          </div>
+        </div>
+      );
+    });
+
   return (
     <section id="skill" className="skill-section" ref={skillRef}>
       <h2>My Skills</h2>
       <div className="skill-columns">
         <div className="skill-column">
           <h3>Frontend</h3>
-          {renderSkills(frontendSkills)}
+          <div className="skill-circle-container">{renderSkills(frontendSkills)}</div>
         </div>
         <div className="skill-column">
           <h3>Backend</h3>
-          {renderSkills(backendSkills)}
+          <div className="skill-circle-container">{renderSkills(backendSkills)}</div>
         </div>
       </div>
     </section>

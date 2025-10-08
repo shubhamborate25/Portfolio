@@ -1,7 +1,7 @@
 .project-section {
-  background: linear-gradient(90deg, #28283d, #34344f);
+  background: #28283d; /* solid background */
   color: white;
-  padding: 100px 20px;
+  padding: 80px 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -9,126 +9,100 @@
 }
 
 .project-section h2 {
-  font-size: 36px;
+  font-size: 32px;
   color: #ff6b35;
-  margin-bottom: 50px;
-  text-shadow: 0 0 5px #ff6b35, 0 0 15px #ff6b35;
+  margin-bottom: 40px;
 }
 
 .project-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  width: 65%;
+  gap: 25px; /* reduced gap for better spacing */
+  width: 65%; /* slightly wider on smaller screens */
   max-width: 1200px;
 }
 
 .project-card {
   background: #2d2d44;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 12px; /* slightly smaller padding */
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   position: relative;
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.2); /* subtle glow */
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(255, 107, 53, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.25); /* slightly stronger glow */
 }
 
 /* Project Image Box */
 .project-image {
   width: 100%;
-  aspect-ratio: 1 / 1; /* square box */
-  position: relative;
-  border-radius: 12px;
+  aspect-ratio: 1 / 0.65; /* slightly taller image for mobile */
+  border-radius: 10px;
   overflow: hidden;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 10px;
-  box-shadow: inset 0 0 20px rgba(255, 107, 53, 0.2);
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  box-shadow: inset 0 0 5px rgba(255, 107, 53, 0.1); /* subtle inner glow */
 }
 
-/* Make img fit the box */
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: fit; /* ensures image fills box without stretching */
-  border-radius: 12px;
+  object-fit: cover;
+  border-radius: 10px;
   display: block;
 }
 
 /* GitHub Link */
 .github-link {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
   background: #ff6b35;
   color: white;
-  padding: 5px 10px;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 500;
   text-decoration: none;
-  opacity: 0;
-  transform: translateY(-8px);
-  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(255, 107, 53, 0.25); /* subtle glow */
 }
-
-.project-image:hover .github-link {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 
 /* Project Title & Description */
 .project-card h3 {
-  font-size: 24px;
+  font-size: 18px;
   color: #ff6b35;
   margin: 0;
 }
 
-.project-desc p {
-  margin-bottom: 10px;
-  color: #ddd;
-  line-height: 1.6;
-}
-
 .project-desc {
+  font-size: 14px;
+  color: #ddd;
+  line-height: 1.4;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* show 3 lines */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis; /* add "..." */
-  transition: max-height 0.3s ease;
+  text-overflow: ellipsis;
 }
 
 .project-desc.expanded {
-  display: block; /* show full content */
+  display: block;
   -webkit-line-clamp: unset;
   overflow: visible;
 }
 
-.project-desc p {
-  margin-bottom: 10px;
-  color: #ddd;
-  line-height: 1.6;
-}
-
-
-.project-desc.expanded {
-  max-height: 1000px; /* expand to show all paragraphs */
-}
-/* See More link */
 .see-more {
   color: #ff6b35;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
-  transition: color 0.3s;
+  font-size: 13px;
 }
 
 .see-more:hover {
@@ -138,11 +112,30 @@
 /* Responsive */
 @media (max-width: 768px) {
   .project-container {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    grid-template-columns: 1fr; /* single column */
+    gap: 15px; /* reduced gap for mobile */
+    width: 60%;
+   
+  }
+
+  .project-card {
+    padding: 10px; /* smaller padding on mobile */
+     margin-bottom: 15px;
   }
 
   .project-image {
-    height: 180px;
+    aspect-ratio: 1 / 0.6; /* slightly taller for mobile */
+  }
+
+  .project-card h3 {
+    font-size: 16px;
+  }
+
+  .project-desc {
+    font-size: 13px;
+  }
+
+  .see-more {
+    font-size: 12px;
   }
 }
