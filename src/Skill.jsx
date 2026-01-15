@@ -7,18 +7,18 @@ const Skill = () => {
   const skillRef = useRef();
 
   const frontendSkills = [
-    { name: "HTML", level: 85, icon: <FaHtml5 /> },
-    { name: "CSS", level: 85, icon: <FaCss3Alt /> },
-    { name: "JavaScript", level: 80, icon: <FaJsSquare /> },
-    { name: "React", level: 75, icon: <FaReact /> },
-    { name: "Bootstrap", level: 80, icon: <FaBootstrap /> },
+    { name: "HTML", level: 90, icon: <FaHtml5 /> },
+    { name: "CSS", level: 90, icon: <FaCss3Alt /> },
+    { name: "JavaScript", level: 85, icon: <FaJsSquare /> },
+    { name: "React", level: 80, icon: <FaReact /> },
+    { name: "Bootstrap", level: 85, icon: <FaBootstrap /> },
   ];
 
   const backendSkills = [
-    { name: "Java", level: 85, icon: <FaJava /> },
-    { name: "Spring Boot", level: 80, icon: <FaJava /> },
-    { name: "Hibernate", level: 70, icon: <FaDatabase /> },
-    { name: "MySQL", level: 80, icon: <FaDatabase /> },
+    { name: "Java", level: 90, icon: <FaJava /> },
+    { name: "Spring Boot", level: 85, icon: <FaJava /> },
+    { name: "Hibernate", level: 80, icon: <FaDatabase /> },
+    { name: "MySQL", level: 85, icon: <FaDatabase /> },
   ];
 
   useEffect(() => {

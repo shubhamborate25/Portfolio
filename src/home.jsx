@@ -2,7 +2,7 @@ import React from "react";
 import "./assets/Css/home.css";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Profile from "./assets/image/pofile.jpg";
-import Resume from "./assets/resume/Shubham_Borate_Resume.pdf"; // <-- Import your resume file
+import Resume from "./assets/resume/Shubham_Borate_Java_Developer.pdf"; // <-- Import your resume file
 
 const Home = () => {
   return (
