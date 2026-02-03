@@ -1,7 +1,7 @@
  import React, { useEffect, useRef } from "react";
 import "./assets/Css/about.css";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
-import Profile from "./assets/image/pofile.jpg";
+import Profile from "./assets/image/profile.png";
 
 const About = () => {
   const descRef = useRef(null);

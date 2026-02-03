@@ -1,7 +1,7 @@
 import React from "react";
 import "./assets/Css/home.css";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import Profile from "./assets/image/pofile.jpg";
+import Profile from "./assets/image/profile.png";
 import Resume from "./assets/resume/Shubham_Borate_Java_Developer.pdf"; // <-- Import your resume file
 
 const Home = () => {
@@ -14,6 +14,8 @@ const Home = () => {
             <img src={Profile} alt="Profile" />
           </div>
         </div>
+
+         
 
         {/* Right side - Text and Socials */}
         <div className="home-right">
