@@ -36,7 +36,7 @@ It showcases my **projects, skills, education, and contact information**, with i
 ---
 
 ## 🔗 Live Demo
-[![Portfolio Website](https://img.shields.io/badge/-Live%20Demo-1abc9c?style=for-the-badge&logo=netlify&logoColor=white)](https://68e346a13b1df77296fe72ce--monumental-haupia-dc27aa.netlify.app/)
+[![Portfolio Website](https://img.shields.io/badge/-Live%20Demo-1abc9c?style=for-the-badge&logo=netlify&logoColor=white)](https://shubhamborate-portfolio.netlify.app/)
 
 ---
 
