@@ -13,9 +13,7 @@ const Home = () => {
           <div className="circle">
             <img src={Profile} alt="Profile" />
           </div>
-        </div>
-
-         
+        </div> 
 
         {/* Right side - Text and Socials */}
         <div className="home-right">
